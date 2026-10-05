@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#5B3FD0">
+<meta name="description" content="e-KOSSTA Model B Prototype">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+<title>e-KOSSTA Model B</title>
+</head>
+<body>
+<header class="topbar"><div><b>e-KOSSTA</b><small>Model B • PWA + Apps Script API</small></div><button id="themeBtn">🌙</button></header>
+<main class="container">
+<section class="card hero"><div><span>PROTOTYPE V1</span><h1>e-KOSSTA Mobile</h1><p>Ujian PWA → Apps Script API → Google Sheets.</p></div><strong id="statusBadge" class="status pending">Belum diuji</strong></section>
+<section class="grid">
+<div class="card"><h2>🔌 Sambungan Backend</h2><p class="muted">Masukkan URL Web App Apps Script.</p><label>Apps Script Web App URL</label><input id="apiUrl" placeholder="https://script.google.com/macros/s/XXXX/exec"><button id="saveUrlBtn" class="btn primary">Simpan URL</button><button id="healthBtn" class="btn secondary">Uji Sambungan</button><div id="healthResult" class="result muted">Belum diuji.</div></div>
+<div class="card"><h2>📊 Data Ujian</h2><div class="stats"><div class="stat"><b id="muridCount">0</b><small>Murid</small></div><div class="stat"><b id="apiState">OFF</b><small>API</small></div></div><button id="loadBtn" class="btn primary full">Muat Data Murid</button></div>
+</section>
+<section class="card"><div class="head"><div><h2>👨‍🎓 Murid Ujian</h2><small class="muted">Data daripada TEST_MURID.</small></div><button id="refreshBtn" class="btn secondary">↻ Refresh</button></div><div id="tableWrap"><div class="empty">Belum ada data.</div></div></section>
+<section class="card"><h2>➕ Tambah Murid Ujian</h2><div class="form-grid"><div><label>Nama</label><input id="nama" placeholder="Ahmad Ali"></div><div><label>No KP Ujian</label><input id="noKp" placeholder="TEST004"></div><div><label>Tingkatan</label><input id="tingkatan" placeholder="4"></div><div><label>Kelas</label><input id="kelas" placeholder="4 Amanah"></div></div><button id="addBtn" class="btn primary">Tambah ke Google Sheet</button><div id="addResult" class="result muted"></div></section>
+<section class="card"><h2>🚀 Selepas V1 Berjaya</h2><ol><li>Authentication sebenar.</li><li>Role ADMIN/GURU.</li><li>Database e-KOSSTA sebenar.</li><li>Dashboard sebenar.</li><li>AI Laporan + Vertex AI.</li><li>PDF + Google Drive.</li></ol></section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body></html>
